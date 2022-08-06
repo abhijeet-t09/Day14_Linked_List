@@ -19,9 +19,12 @@ public class LinkedListMain {
         linkedList1.push(70);
         linkedList1.push(56);
         linkedList1.print();
-        System.out.println();
 
         linkedList1.insert(30);
+        linkedList1.print();
+        System.out.println();
+
+        System.out.println("Element being Poped: " + linkedList1.pop());
         linkedList1.print();
     }
 }

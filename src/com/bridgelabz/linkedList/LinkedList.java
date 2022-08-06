@@ -27,6 +27,13 @@ public class LinkedList<T> {
         }
     }
 
+    public T pop() {
+        T deletedElement = head.data;
+        head = head.next;
+        return deletedElement;
+    }
+
+
     public void insert(T data) {
         Node<T> node = new Node<>(data);
         head.next = node;
