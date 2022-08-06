@@ -21,6 +21,6 @@ public class LinkedList<T> {
             System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
-        System.out.println("NULL");
+        System.out.println(tail.next);
     }
 }
