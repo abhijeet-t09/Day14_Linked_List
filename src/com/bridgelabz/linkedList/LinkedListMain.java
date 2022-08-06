@@ -24,7 +24,14 @@ public class LinkedListMain {
         linkedList1.print();
         System.out.println();
 
-        System.out.println("Element being Popped: " + linkedList1.popLast());
-        linkedList1.print();
+//        System.out.println("Element being Popped: " + linkedList1.popLast());
+//        linkedList1.print();
+
+        if(linkedList1.search(30) != null ){
+            System.out.println("Element is Present in Linked List");
+        }
+        else {
+            System.out.println("Element Not Found");
+        }
     }
 }
