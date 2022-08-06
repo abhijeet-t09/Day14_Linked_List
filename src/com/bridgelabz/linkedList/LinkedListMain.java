@@ -24,7 +24,7 @@ public class LinkedListMain {
         linkedList1.print();
         System.out.println();
 
-        System.out.println("Element being Poped: " + linkedList1.pop());
+        System.out.println("Element being Popped: " + linkedList1.popLast());
         linkedList1.print();
     }
 }
