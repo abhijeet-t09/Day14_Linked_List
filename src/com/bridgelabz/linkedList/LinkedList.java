@@ -33,13 +33,6 @@ public class LinkedList<T> {
         return deletedElement;
     }
 
-
-    public void insert(T data) {
-        Node<T> node = new Node<>(data);
-        head.next = node;
-        node.next = tail;
-    }
-
     public T popLast() {
         T deletedElement = tail.data;
         Node<T> temp = head;
@@ -50,6 +43,23 @@ public class LinkedList<T> {
         temp = tail;
         return  deletedElement;
 
+    }
+
+    public void insert(T data) {
+        Node<T> node = new Node<>(data);
+        head.next = node;
+        node.next = tail;
+    }
+
+    public boolean insertAfter(T searchData, T insertData) {
+        Node<T> newNode = new Node<>(insertData);
+        Node<T> searchedNode = search(searchData);
+        if (searchedNode != null) {
+            newNode.next = searchedNode.next;
+            searchedNode.next = newNode;
+            return true;
+        }
+        return false;
     }
 
     public Node<T> search(T searchData) {
