@@ -45,6 +45,16 @@ public class LinkedList<T> {
 
     }
 
+    public void popElement(T value){
+        Node<T> searchedNode = search(value);
+        Node<T> temp = head;
+        while(temp.next != searchedNode){
+            temp = temp.next;
+        }
+        temp.next = searchedNode.next;
+
+    }
+
     public void insert(T data) {
         Node<T> node = new Node<>(data);
         head.next = node;
@@ -70,6 +80,16 @@ public class LinkedList<T> {
             temp = temp.next;
         }
         return null;
+    }
+
+    public int size(){
+        int count=0;
+        Node<T> temp = head;
+        while(temp != null){
+            temp = temp.next;
+            count++;
+        }
+        return count;
     }
 
     void print() {
